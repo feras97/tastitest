@@ -8,10 +8,10 @@
       console.log('ready!');
     
       if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', ["new", '192.168.1.6', 9000]);
+  this.window.flutter_inappwebview.callHandler('print', ["normal", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["new", '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["___", '192.168.1.6', 9000]));
 }
     
    });
@@ -30,10 +30,10 @@
 function myFunction() {
   console.log('clicked!');
   if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', ["new", '192.168.1.6', 9000]);
+  this.window.flutter_inappwebview.callHandler('print', ["normal", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["new", '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["___", '192.168.1.6', 9000]));
 }
 }
 </script>
