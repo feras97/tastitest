@@ -6,8 +6,12 @@
   <script>
   window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
       console.log('ready!');
-  this.window.flutter_inappwebview.callHandler('print');
-   });
+  if (window.flutter_inappwebview.callHandler) {
+  this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
+} else {
+/// maybe message type error in flutter, convert to string is work
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify([buffer1, '192.168.1.6', 9001]));
+}   });
   </script>
 <h1>The onclick Event</h1>
 
@@ -22,7 +26,12 @@
 <script>
 function myFunction() {
   console.log('clicked!');
+  if (window.flutter_inappwebview.callHandler) {
   this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
+} else {
+/// maybe message type error in flutter, convert to string is work
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify([buffer1, '192.168.1.6', 9001]));
+}
 }
 </script>
 
