@@ -6,12 +6,15 @@
   <script>
   window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
       console.log('ready!');
-  if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
+    
+      if (window.flutter_inappwebview.callHandler) {
+  this.window.flutter_inappwebview.callHandler('print', ["new", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify([buffer1, '192.168.1.6', 9001]));
-}   });
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["new", '192.168.1.6', 9000]));
+}
+    
+   });
   </script>
 <h1>The onclick Event</h1>
 
@@ -27,10 +30,10 @@
 function myFunction() {
   console.log('clicked!');
   if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
+  this.window.flutter_inappwebview.callHandler('print', ["new", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify([buffer1, '192.168.1.6', 9001]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["new", '192.168.1.6', 9000]));
 }
 }
 </script>
