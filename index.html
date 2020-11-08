@@ -5,6 +5,7 @@
   
   <script type='text/javascript'>
   window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+      console.log('ready!');
   this.window.flutter_inappwebview.callHandler('print');
    });
   </script>
@@ -20,6 +21,7 @@
 
 <script>
 function myFunction() {
+  console.log('clicked!');
   this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
 }
 </script>
