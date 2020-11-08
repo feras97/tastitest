@@ -2,6 +2,12 @@
 <html>
 <body>
 
+  
+  <script type='text/javascript'>
+  window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+  this.window.flutter_inappwebview.callHandler('print', [buffer1, '192.168.1.6', 9001]);
+   });
+  </script>
 <h1>The onclick Event</h1>
 
 <p>The onclick event is used to trigger a function when an element is clicked on.</p>
