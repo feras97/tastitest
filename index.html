@@ -11,7 +11,7 @@
   this.window.flutter_inappwebview.callHandler('print', ["normal", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["___", '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["not", '192.168.1.6', 9000]));
 }
     
    });
@@ -33,7 +33,7 @@ function myFunction() {
   this.window.flutter_inappwebview.callHandler('print', ["normal", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["___", '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["not", '192.168.1.6', 9000]));
 }
 }
 </script>
