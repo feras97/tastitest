@@ -20,10 +20,10 @@
 function myFunction() {
   console.log('clicked!');
   if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', ['normal', '192.168.1.60', 9100]);
+  this.window.flutter_inappwebview.callHandler('printnormal', ['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.60', 9100]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(['weird', '192.168.1.60', 9100]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.60', 9100]));
 }
 }
 </script>
