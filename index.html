@@ -11,7 +11,7 @@
   this.window.flutter_inappwebview.callHandler('print', ["normal", '192.168.1.6', 9000]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["not", '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(["not", '192.168.1.60', 9100]));
 }
     
    });
@@ -28,10 +28,10 @@
 function myFunction() {
   console.log('clicked!');
   if (window.flutter_inappwebview.callHandler) {
-  this.window.flutter_inappwebview.callHandler('print', ['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.6', 9000]);
+  this.window.flutter_inappwebview.callHandler('print', ['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.60', 9100]);
 } else {
 /// maybe message type error in flutter, convert to string is work
-   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.6', 9000]));
+   window.flutter_inappwebview._callHandler('print', setTimeout(function(){}), JSON.stringify(['[["println","Baba Ghannouj Restaurant & Catering"],["println","Printer connect success."]]', '192.168.1.60', 9100]));
 }
 }
 </script>
